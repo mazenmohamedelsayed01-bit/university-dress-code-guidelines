@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Dress Code Guidelines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #102542;
+      --navy-2: #183b63;
+      --gold: #caa43a;
+      --gold-soft: #fff6dc;
+      --white: #ffffff;
+      --page: #f5f7fb;
+      --ink: #172234;
+      --muted: #657386;
+      --line: #dce4ee;
+      --red: #b83232;
+      --red-soft: rgba(184, 50, 50, 0.72);
+      --green: #1f7a4d;
+      --green-soft: rgba(31, 122, 77, 0.72);
+      --shadow: 0 18px 42px rgba(16, 37, 66, 0.14);
+      --radius: 16px;
+      color-scheme: light;
+    }
+
+    body.dark {
+      --navy: #e3edff;
+      --navy-2: #b9cbed;
+      --gold: #f0cb5c;
+      --gold-soft: #372d14;
+      --white: #101827;
+      --page: #0b1220;
+      --ink: #eff5ff;
+      --muted: #aab8cb;
+      --line: #29384e;
+      --shadow: 0 18px 42px rgba(0, 0, 0, 0.36);
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: "Lato", Arial, sans-serif;
+      line-height: 1.65;
+      transition: background 200ms ease, color 200ms ease;
+    }
+
+    body.lightbox-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 15px clamp(18px, 5vw, 72px);
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--white) 92%, transparent);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand,
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .logo {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--navy);
+      font-family: "Merriweather", Georgia, serif;
+      font-weight: 900;
+    }
+
+    .nav-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .nav-actions a,
+    .nav-actions button,
+    .print-button,
+    .quiz-choice {
+      min-height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0 14px;
+      background: var(--white);
+      color: var(--navy);
+      cursor: pointer;
+      font-weight: 900;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .nav-actions a {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-actions a:hover,
+    .nav-actions button:hover,
+    .print-button:hover,
+    .quiz-choice:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold);
+      background: var(--gold-soft);
+      box-shadow: 0 10px 20px rgba(16, 37, 66, 0.1);
+    }
+
+    .section {
+      padding: clamp(56px, 8vw, 96px) clamp(18px, 5vw, 72px);
+    }
+
+    .section-title {
+      max-width: 860px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .kicker {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--navy);
+      font-family: "Merriweather", Georgia, serif;
+      line-height: 1.18;
+    }
+
+    h1 {
+      max-width: 940px;
+      margin: 0 auto 18px;
+      color: #ffffff;
+      font-size: clamp(42px, 7vw, 78px);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      font-size: clamp(30px, 4.4vw, 48px);
+    }
+
+    h3 {
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    .hero {
+      min-height: 600px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(16, 37, 66, 0.78), rgba(16, 37, 66, 0.68)),
+        url("assets/university-hero.png");
+      background-position: center;
+      background-size: cover;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .hero-content {
+      width: min(980px, 100%);
+    }
+
+    .hero-logo {
+      display: grid;
+      width: 94px;
+      height: 94px;
+      place-items: center;
+      margin: 0 auto 22px;
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.96);
+      color: #102542;
+      font-family: "Merriweather", Georgia, serif;
+      font-size: 28px;
+      font-weight: 900;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.24);
+    }
+
+    .hero-subtitle {
+      max-width: 760px;
+      margin: 0 auto;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: clamp(18px, 2.3vw, 24px);
+    }
+
+    .scroll-arrow {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      width: 34px;
+      height: 52px;
+      border: 2px solid rgba(255, 255, 255, 0.74);
+      border-radius: 999px;
+      transform: translateX(-50%);
+    }
+
+    .scroll-arrow::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      transform: translateX(-50%) rotate(45deg);
+      animation: arrowMove 1.4s infinite;
+    }
+
+    @keyframes arrowMove {
+      0% {
+        opacity: 0;
+        top: 8px;
+      }
+      45% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        top: 28px;
+      }
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .gallery-column {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: clamp(18px, 3vw, 28px);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-column.inappropriate {
+      border-top: 6px solid var(--red);
+    }
+
+    .gallery-column.appropriate {
+      border-top: 6px solid var(--green);
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .flip-card {
+      display: block;
+      width: 100%;
+      height: 330px;
+      min-height: 330px;
+      border: 0;
+      border-radius: var(--radius);
+      padding: 0;
+      background: transparent;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .flip-inner {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 330px;
+      transform-style: preserve-3d;
+      transition: transform 560ms ease;
+    }
+
+    .flip-card:hover .flip-inner,
+    .flip-card:focus-visible .flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 10px 24px rgba(16, 37, 66, 0.08);
+      backface-visibility: hidden;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 420ms ease;
+    }
+
+    .flip-card:hover img,
+    .flip-card:focus-visible img {
+      transform: scale(1.08);
+    }
+
+    .tint {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      align-content: end;
+      padding: 16px;
+      color: #ffffff;
+    }
+
+    .tint.red {
+      background: linear-gradient(180deg, transparent 30%, var(--red-soft));
+    }
+
+    .tint.green {
+      background: linear-gradient(180deg, transparent 30%, var(--green-soft));
+    }
+
+    .badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      border-radius: 50%;
+      background: #ffffff;
+      font-size: 24px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+      transition: transform 220ms ease;
+    }
+
+    .flip-card:hover .badge,
+    .flip-card:focus-visible .badge {
+      transform: scale(1.18) rotate(-8deg);
+    }
+
+    .overlay-label {
+      margin: 0;
+      font-family: "Merriweather", Georgia, serif;
+      font-size: 19px;
+      font-weight: 900;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    }
+
+    .tooltip {
+      position: absolute;
+      right: 14px;
+      bottom: 58px;
+      left: 14px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(16, 37, 66, 0.9);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 800;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 220ms ease, transform 220ms ease;
+    }
+
+    .flip-card:hover .tooltip,
+    .flip-card:focus-visible .tooltip {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-back {
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      text-align: center;
+      transform: rotateY(180deg);
+    }
+
+    .card-back.red {
+      background: linear-gradient(160deg, #fff4f4, #ffffff);
+      color: #691f1f;
+    }
+
+    .card-back.green {
+      background: linear-gradient(160deg, #edfff5, #ffffff);
+      color: #164d32;
+    }
+
+    body.dark .card-back.red,
+    body.dark .card-back.green {
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .quiz-section {
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--navy) 8%, transparent), transparent 42%),
+        var(--white);
+    }
+
+    .quiz-shell {
+      max-width: 980px;
+      margin: 0 auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: clamp(18px, 4vw, 34px);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .quiz-card {
+      display: grid;
+      grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+      align-items: center;
+      gap: clamp(20px, 5vw, 46px);
+    }
+
+    .quiz-image-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--page);
+    }
+
+    .quiz-image-wrap img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+    }
+
+    .quiz-progress {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .quiz-question {
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .quiz-choices {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .quiz-choice {
+      min-height: 48px;
+      min-width: 130px;
+      font-size: 18px;
+    }
+
+    .quiz-feedback {
+      min-height: 58px;
+      margin: 18px 0 0;
+      border-radius: 12px;
+      padding: 14px;
+      background: var(--gold-soft);
+      color: var(--ink);
+      font-weight: 900;
+      transform: scale(1);
+    }
+
+    .quiz-feedback.pop {
+      animation: feedbackPop 360ms ease;
+    }
+
+    @keyframes feedbackPop {
+      0% {
+        transform: scale(0.96);
+        opacity: 0.45;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .score-line {
+      margin: 16px 0 0;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .rule-card {
+      min-height: 170px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: var(--white);
+      box-shadow: 0 10px 24px rgba(16, 37, 66, 0.07);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .rule-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .rule-icon {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      margin-bottom: 14px;
+      border-radius: 50%;
+      background: var(--gold-soft);
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .rule-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .site-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 32px 18px;
+      background: #102542;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .site-footer .logo {
+      background: #ffffff;
+      color: #102542;
+    }
+
+    .site-footer p {
+      margin: 0;
+      color: #ffffff;
+      font-weight: 900;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: none;
+      place-items: center;
+      padding: 20px;
+      background: rgba(5, 12, 22, 0.82);
+    }
+
+    .lightbox.active {
+      display: grid;
+    }
+
+    .lightbox-content {
+      width: min(760px, 100%);
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
+    }
+
+    .lightbox-content img {
+      width: 100%;
+      max-height: 70vh;
+      object-fit: cover;
+    }
+
+    .lightbox-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px;
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .lightbox-close {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--ink);
+      cursor: pointer;
+      font-weight: 900;
+      min-height: 38px;
+      padding: 0 14px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 650ms ease, transform 650ms ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .gallery,
+      .quiz-card {
+        grid-template-columns: 1fr;
+      }
+
+      .rules-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-actions {
+        width: 100%;
+      }
+
+      .nav-actions a,
+      .nav-actions button {
+        flex: 1 1 calc(50% - 10px);
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: 540px;
+      }
+
+      .image-grid,
+      .rules-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .flip-card,
+      .flip-inner {
+        height: 390px;
+        min-height: 390px;
+      }
+
+      .site-footer {
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      .site-header,
+      .scroll-arrow,
+      .quiz-section,
+      .lightbox {
+        display: none !important;
+      }
+
+      body {
+        background: #ffffff;
+        color: #000000;
+      }
+
+      .hero,
+      .section {
+        min-height: auto;
+        padding: 24px 0;
+        background: #ffffff !important;
+        color: #000000;
+      }
+
+      h1,
+      h2,
+      h3,
+      .hero h1 {
+        color: #000000;
+      }
+
+      .gallery,
+      .rules-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery-column,
+      .rule-card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="University dress code home">
+      <span class="logo">U</span>
+      <span>Campus Standards</span>
+    </a>
+
+    <nav class="nav-actions" aria-label="Website navigation">
+      <a href="#gallery">Gallery</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#rules">Rules</a>
+      <button id="themeToggle" type="button">Dark Mode</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-content fade-in">
+        <span class="hero-logo">U</span>
+        <p class="kicker">Student Affairs Guide</p>
+        <h1>University Dress Code Guidelines</h1>
+        <p class="hero-subtitle">Maintaining respect and proper appearance on campus</p>
+      </div>
+      <a class="scroll-arrow" href="#gallery" aria-label="Scroll to comparison gallery"></a>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="section-title fade-in">
+        <p class="kicker">Comparison Gallery</p>
+        <h2>Choose a respectful campus appearance</h2>
+        <p>Click any image to open it in a lightbox. Hover over cards to zoom, flip, and read the short guideline.</p>
+      </div>
+
+      <div class="gallery">
+        <article class="gallery-column inappropriate fade-in">
+          <h3>Inappropriate Attire ❌</h3>
+          <div class="image-grid">
+            <button class="flip-card lightbox-trigger" type="button" data-title="Ripped Jeans ❌" data-src="assets/ripped-jeans.png">
+              <span class="flip-inner">
+                <span class="card-face card-front">
+                  <img src="assets/ripped-jeans.png" alt="Student wearing ripped or torn jeans" loading="lazy">
+                  <span class="badge">❌</span>
+                  <span class="tooltip">Torn jeans look too casual for a formal learning environment.</span>
+                  <span class="tint red"><span class="overlay-label">Ripped Jeans ❌</span></span>
+                </span>
+                <span class="card-face card-back red">Avoid torn or ripped jeans during lectures, meetings, and campus visits.</span>
+              </span>
+            </button>
+
+            <button class="flip-card lightbox-trigger" type="button" data-title="Shorts ❌" data-src="assets/shorts.png">
+              <span class="flip-inner">
+                <span class="card-face card-front">
+                  <img src="assets/shorts.png" alt="Student wearing shorts" loading="lazy">
+                  <span class="badge">❌</span>
+                  <span class="tooltip">Shorts are not recommended for university spaces.</span>
+                  <span class="tint red"><span class="overlay-label">Shorts ❌</span></span>
+                </span>
+                <span class="card-face card-back red">Choose trousers, skirts, dresses, or abayas that suit campus dignity.</span>
+              </span>
+            </button>
+
+            <button class="flip-card lightbox-trigger" type="button" data-title="Sleeveless Shirt ❌" data-src="assets/sleeveless-shirt.png">
+              <span class="flip-inner">
+                <span class="card-face card-front">
+                  <img src="assets/sleeveless-shirt.png" alt="Student wearing sleeveless shirt" loading="lazy">
+                  <span class="badge">❌</span>
+                  <span class="tooltip">Sleeveless shirts are too informal for campus standards.</span>
+                  <span class="tint red"><span class="overlay-label">Sleeveless Shirt ❌</span></span>
+                </span>
+                <span class="card-face card-back red">Wear a collared shirt, blouse, modest dress, or other suitable top.</span>
+              </span>
+            </button>
+
+            <button class="flip-card lightbox-trigger" type="button" data-title="Flip Flops ❌" data-src="assets/flip-flops.png">
+              <span class="flip-inner">
+                <span class="card-face card-front">
+                  <img src="assets/flip-flops.png" alt="Student wearing flip flops" loading="lazy">
+                  <span class="badge">❌</span>
+                  <span class="tooltip">Flip flops can look careless and may be unsafe in some facilities.</span>
+                  <span class="tint red"><span class="overlay-label">Flip Flops ❌</span></span>
+                </span>
+                <span class="card-face card-back red">Use clean closed-toe shoes for safe and respectful campus movement.</span>
+              </span>
+            </button>
+
+            <button class="flip-card lightbox-trigger" type="button" data-title="Messy Appearance ❌" data-src="assets/messy-appearance.png">
+              <span class="flip-inner">
+                <span class="card-face card-front">
+                  <img src="assets/messy-appearance.png" alt="Student with messy hair or unkempt appearance" loading="lazy">
+                  <span class="badge">❌</span>
+                  <span class="tooltip">An unkempt appearance weakens the academic impression.</span>
+                  <span class="tint red"><span class="overlay-label">Messy Appearance ❌</span></span>
+                </span>
+                <span class="card-face card-back red">A clean, neat look shows respect for yourself and others.</span>
+              </span>
+            </button>
+
+            <button class="flip-card lightbox-trigger" type="button" data-title="Baggy Clothes ❌" data-src="assets/baggy-clothes.png">
+              <span class="flip-inner">
+                <span class="card-face card-front">
+                  <img src="assets/baggy-clothes.png" alt="Student wearing overly baggy clothes" loading="lazy">
+                  <span class="badge">❌</span>
+                  <span class="tooltip">Overly baggy clothes are too casual for university standards.</span>
+                  <span class="tint red"><span class="overlay-label">Baggy Clothes ❌</span></span>
+                </span>
+                <span class="card-face card-back red">Select clothing that is comfortable, modest, and presentable.</span>
+              </span>
+            </button>
+          </div>
+        </article>
+
+        <article class="gallery-column appropriate fade-in">
+          <h3>Appropriate Attire ✅</h3>
+          <div class="image-grid">
+            <button class="flip-card lightbox-trigger" type="button" data-title="Formal Shirt & Trousers ✅" data-src="assets/formal-student.png">
+              <span class="flip-inner">
+                <span class="card-face card-front">
+                  <img src="assets/formal-student.png" alt="Male student in formal trousers and collared shirt" loading="lazy">
+                  <span class="badge">✅</span>
+                  <span class="tooltip">Formal trousers and a collared shirt fit academic settings.</span>
+                  <span class="tint green"><span class="overlay-label">Formal Student ✅</span></span>
+                </span>
+                <span class="card-face card-back green">A collared shirt with formal trousers gives a clean campus-ready look.</span>
+              </span>
+            </button>
+
+            <button class="flip-card lightbox-trigger" type="button" data-title="Modest Dress / Abaya ✅" data-src="assets/modest-dress.png">
+              <span class="flip-inner">
+                <span class="card-face card-front">
+                  <img src="assets/modest-dress.png" alt="Female student in modest dress or abaya" loading="lazy">
+                  <span class="badge">✅</span>
+                  <span class="tooltip">Modest dresses and abayas are respectful campus choices.</span>
+                  <span class="tint green"><span class="overlay-label">Modest Dress ✅</span></span>
+                </span>
+                <span class="card-face card-back green">Choose modest clothing that is comfortable, clean, and suitable for study.</span>
+              </span>
+            </button>
+
+            <button class="flip-card lightbox-trigger" type="button" data-title="Closed-Toe Shoes ✅" data-src="assets/closed-toe-shoes.png">
+              <span class="flip-inner">
+                <span class="card-face card-front">
+                  <img src="assets/closed-toe-shoes.png" alt="Student wearing clean closed-toe shoes" loading="lazy">
+                  <span class="badge">✅</span>
+                  <span class="tooltip">Closed-toe shoes are safer and more suitable on campus.</span>
+                  <span class="tint green"><span class="overlay-label">Closed-Toe Shoes ✅</span></span>
+                </span>
+                <span class="card-face card-back green">Clean closed-toe shoes support safety in classrooms, labs, and hallways.</span>
+              </span>
+            </button>
+
+            <button class="flip-card lightbox-trigger" type="button" data-title="Neat Appearance ✅" data-src="assets/neat-appearance.png">
+              <span class="flip-inner">
+                <span class="card-face card-front">
+                  <img src="assets/neat-appearance.png" alt="Student with neat tidy appearance" loading="lazy">
+                  <span class="badge">✅</span>
+                  <span class="tooltip">A tidy appearance reflects respect and readiness.</span>
+                  <span class="tint green"><span class="overlay-label">Neat Appearance ✅</span></span>
+                </span>
+                <span class="card-face card-back green">Keep clothing clean, hair tidy, and your overall look organized.</span>
+              </span>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="quiz" class="section quiz-section">
+      <div class="section-title fade-in">
+        <p class="kicker">Interactive Quiz</p>
+        <h2>Is My Outfit Appropriate?</h2>
+        <p>Review each outfit, then click ✅ or ❌. On mobile, swipe left or right to move between questions.</p>
+      </div>
+
+      <div class="quiz-shell fade-in">
+        <div class="quiz-card">
+          <div class="quiz-image-wrap">
+            <img id="quizImage" src="assets/formal-student.png" alt="Quiz outfit image" loading="lazy">
+          </div>
+
+          <div>
+            <p id="quizProgress" class="quiz-progress">Question 1 of 6</p>
+            <h3 id="quizTitle">Formal student outfit</h3>
+            <p id="quizQuestion" class="quiz-question">Is this outfit appropriate for campus?</p>
+            <div class="quiz-choices">
+              <button class="quiz-choice" type="button" data-answer="yes">✅ Appropriate</button>
+              <button class="quiz-choice" type="button" data-answer="no">❌ Inappropriate</button>
+            </div>
+            <p id="quizFeedback" class="quiz-feedback" role="status">Choose an answer to begin.</p>
+            <p id="scoreLine" class="score-line">Score: 0 / 0</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rules" class="section">
+      <div class="section-title fade-in">
+        <p class="kicker">Rules Summary</p>
+        <h2>Campus dress code rules</h2>
+        <p>Use this summary as a quick printable reference for respectful university appearance.</p>
+      </div>
+
+      <div class="rules-grid">
+        <article class="rule-card fade-in">
+          <span class="rule-icon">👔</span>
+          <h3>Dress neatly</h3>
+          <p>Choose clothes that are clean, ironed, and suitable for an academic setting.</p>
+        </article>
+        <article class="rule-card fade-in">
+          <span class="rule-icon">👞</span>
+          <h3>Wear safe shoes</h3>
+          <p>Closed-toe shoes are preferred for safety and a more formal appearance.</p>
+        </article>
+        <article class="rule-card fade-in">
+          <span class="rule-icon">🧥</span>
+          <h3>Keep it modest</h3>
+          <p>Avoid very short, sleeveless, torn, or overly casual clothing.</p>
+        </article>
+        <article class="rule-card fade-in">
+          <span class="rule-icon">✨</span>
+          <h3>Stay tidy</h3>
+          <p>Maintain clean grooming and an organized appearance throughout the day.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="logo">U</span>
+    <p>Let's preserve the dignity of our campus</p>
+  </footer>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="assets/formal-student.png" alt="">
+      <div class="lightbox-caption">
+        <span id="lightboxTitle"></span>
+        <button id="lightboxClose" class="lightbox-close" type="button">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const themeToggle = document.querySelector("#themeToggle");
+    const lightbox = document.querySelector("#lightbox");
+    const lightboxImage = document.querySelector("#lightboxImage");
+    const lightboxTitle = document.querySelector("#lightboxTitle");
+    const lightboxClose = document.querySelector("#lightboxClose");
+    const quizImage = document.querySelector("#quizImage");
+    const quizProgress = document.querySelector("#quizProgress");
+    const quizTitle = document.querySelector("#quizTitle");
+    const quizFeedback = document.querySelector("#quizFeedback");
+    const scoreLine = document.querySelector("#scoreLine");
+
+    const quizItems = [
+      {
+        title: "Formal student outfit",
+        image: "assets/formal-student.png",
+        answer: "yes",
+        feedback: "Correct. Formal trousers and a collared shirt are campus-appropriate."
+      },
+      {
+        title: "Ripped jeans",
+        image: "assets/ripped-jeans.png",
+        answer: "no",
+        feedback: "Correct. Torn or ripped jeans are not recommended on campus."
+      },
+      {
+        title: "Modest dress or abaya",
+        image: "assets/modest-dress.png",
+        answer: "yes",
+        feedback: "Correct. A modest dress or abaya is a respectful choice."
+      },
+      {
+        title: "Flip flops",
+        image: "assets/flip-flops.png",
+        answer: "no",
+        feedback: "Correct. Flip flops are too casual and may be unsafe in some campus areas."
+      },
+      {
+        title: "Clean closed-toe shoes",
+        image: "assets/closed-toe-shoes.png",
+        answer: "yes",
+        feedback: "Correct. Closed-toe shoes are neat, safe, and appropriate."
+      },
+      {
+        title: "Messy appearance",
+        image: "assets/messy-appearance.png",
+        answer: "no",
+        feedback: "Correct. A tidy appearance supports campus dignity."
+      }
+    ];
+
+    let quizIndex = 0;
+    let score = 0;
+    let answered = 0;
+    let quizComplete = false;
+    let touchStartX = 0;
+
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      themeToggle.textContent = document.body.classList.contains("dark") ? "Light Mode" : "Dark Mode";
+    });
+
+    document.querySelectorAll(".lightbox-trigger").forEach((card) => {
+      card.addEventListener("click", () => {
+        lightboxImage.src = card.dataset.src;
+        lightboxImage.alt = card.dataset.title;
+        lightboxTitle.textContent = card.dataset.title;
+        lightbox.classList.add("active");
+        document.body.classList.add("lightbox-open");
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      document.body.classList.remove("lightbox-open");
+    }
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+    });
+
+    function renderQuiz() {
+      const item = quizItems[quizIndex];
+      quizImage.src = item.image;
+      quizImage.alt = item.title;
+      quizTitle.textContent = item.title;
+      quizProgress.textContent = `Question ${quizIndex + 1} of ${quizItems.length}`;
+      scoreLine.textContent = `Score: ${score} / ${answered}`;
+    }
+
+    function nextQuestion() {
+      quizIndex = (quizIndex + 1) % quizItems.length;
+      renderQuiz();
+    }
+
+    function previousQuestion() {
+      quizIndex = (quizIndex - 1 + quizItems.length) % quizItems.length;
+      renderQuiz();
+    }
+
+    document.querySelectorAll(".quiz-choice").forEach((button) => {
+      button.addEventListener("click", () => {
+        if (quizComplete) {
+          return;
+        }
+
+        const item = quizItems[quizIndex];
+        const isCorrect = button.dataset.answer === item.answer;
+        answered += 1;
+        if (isCorrect) {
+          score += 1;
+        }
+
+        quizFeedback.textContent = isCorrect ? item.feedback : "Not quite. Review the guideline and try the next outfit.";
+        quizFeedback.classList.remove("pop");
+        void quizFeedback.offsetWidth;
+        quizFeedback.classList.add("pop");
+        scoreLine.textContent = `Score: ${score} / ${answered}`;
+
+        if (answered === quizItems.length) {
+          quizComplete = true;
+          quizFeedback.textContent = `Quiz complete. Final score: ${score} / ${quizItems.length}`;
+          scoreLine.textContent = `Final Score: ${score} / ${quizItems.length}`;
+          return;
+        }
+
+        setTimeout(nextQuestion, 900);
+      });
+    });
+
+    document.querySelector(".quiz-shell").addEventListener("touchstart", (event) => {
+      touchStartX = event.changedTouches[0].screenX;
+    }, { passive: true });
+
+    document.querySelector(".quiz-shell").addEventListener("touchend", (event) => {
+      const touchEndX = event.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 60) {
+        diff < 0 ? nextQuestion() : previousQuestion();
+      }
+    }, { passive: true });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll(".fade-in").forEach((element) => observer.observe(element));
+    renderQuiz();
+  </script>
+</body>
+</html>
